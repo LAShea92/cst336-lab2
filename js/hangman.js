@@ -53,7 +53,7 @@ function updateWord(positions, letter){
 
 function disableButton(btn){
     btn.prop("disabled", true);
-    btn.attr("class", "btn btn-danger")
+    btn.attr("class", "btn btn-danger");
 }
 
 $("letterBtn").click(function(){
