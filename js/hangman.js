@@ -113,7 +113,6 @@ function checkLetter(letter){
         }
     }
     else{
-        remainingGuesses -= 1;
         updateMan();
     }
   
