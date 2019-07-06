@@ -35,7 +35,7 @@ function pickWord(){
 
 function updateBoard(){
     $("#word").empty();  
-    for(var i=0; i < board.length; i++){
+    for(var i = 0; i < board.length; i++){
         $("#word").append(board[i] + " ");
     }
   
@@ -81,6 +81,7 @@ function createLetters() {
 }
 
 function updateMan(){
+    remainingGuesses -= 1;
     $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
 }
 
@@ -113,7 +114,6 @@ function checkLetter(letter){
         }
     }
     else{
-        remainingGuesses -= 1;
         updateMan();
     }
   
