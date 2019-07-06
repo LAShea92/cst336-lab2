@@ -31,9 +31,18 @@ function pickWord(){
 }
 
 function updateBoard(){
+    $("#word").empty();  
     for(var letter of board){
         document.getElementById("word").innerHTML += letter + " ";
     }
+}
+
+function updateWord(positions, letter){
+    for(var pos of positions){
+        board[pos] = letter;
+    }
+  
+    updateBoard();
 }
 
 $("letterBtn").click(function(){
@@ -45,9 +54,28 @@ $(".letter").click(function(){
     checkLetter($(this).attr("id"));
 });
 
+$(".replayBtn").on("click", function(){
+    location.reload();
+});
+
 function createLetters() {
     for (var letter of alphabet){
         $("#letters").append("<button class='letter' id='" + letter + "'>" + letter + "</button>");
+    }
+}
+
+function updateMan(){
+    $("hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
+}
+
+function endGame(win){
+    $("#letters").hide();
+  
+    if(win){
+        $('#won').show();
+    }
+    else{
+        $('#lost').show();
     }
 }
 
@@ -63,8 +91,17 @@ function checkLetter(letter){
   
     if(positions.length > 0){
         updateWord(positions, letter);
+      
+        if(!board.includes('_')){
+            endGame(true);
+        }
     }
     else{
         remainingGuesses -= 1;
+        updateMan();
+    }
+  
+    if(remainingGuesses <= 0){
+        endGame(false);
     }
 }
