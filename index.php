@@ -18,7 +18,7 @@
                 <h4>Javascript Edition</h4>
             </header>
             <div id="word"></div>
-            <div id ="hint"><button class hintBtn btn-success>Show Hint</button></div>
+            <div id ="hint"><button class ="hintBtn btn-success">Show Hint</button></div>
             <div id="letters"></div>
           
             <div id="man">
