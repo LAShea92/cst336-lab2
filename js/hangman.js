@@ -3,7 +3,9 @@ var selectedWord = "";
 var selectedHint = "";
 var board = [];
 var remainingGuesses = 6;
-var words = ["snake", "monkey", "beetle"];
+var words = [{ word: "snake", hint: "It's a reptile"},
+             { word: "monkey", hint: "It's a mammal"},
+             { word: "beetle", hint: "It's an insect"}];
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
                 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
                 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -27,14 +29,18 @@ function initBoard(){
 
 function pickWord(){
     var randomInt = Math.floor(Math.random() * words.length);
-    selectedWord = words[randomInt].toUpperCase();
+    selectedWord = words[randomInt].word.toUpperCase();
+    selectedHint = words[randomInt].hint;
 }
 
 function updateBoard(){
     $("#word").empty();  
-    for(var letter of board){
-        document.getElementById("word").innerHTML += letter + " ";
+    for(var i=0; i < board.length; i++){
+        $("#word").append(board[i] + " ");
     }
+  
+    $("#word").append("<br />");
+    $("#word").append("<span class='hint'>Hint: "> + selectedHint + "</span>");
 }
 
 function updateWord(positions, letter){
@@ -43,6 +49,11 @@ function updateWord(positions, letter){
     }
   
     updateBoard();
+}
+
+function disableButton(btn){
+    btn.prop("disabled", true);
+    btn.attr("class", "btn btn-danger")
 }
 
 $("letterBtn").click(function(){
@@ -57,6 +68,11 @@ $(".letter").click(function(){
 $(".replayBtn").on("click", function(){
     location.reload();
 });
+
+$(".letter").click(function(){
+    checkLetter($(this).attr("id"));
+    disableButton($(this));
+})
 
 function createLetters() {
     for (var letter of alphabet){
