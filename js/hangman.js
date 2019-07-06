@@ -87,7 +87,7 @@ function showHint(){
     $("#word").append("<br />");
     $("#hint").append("<span class='hint'>Hint: " + selectedHint + "</span>");
     updateMan();
-    disableButton()
+    disableButton();
 }
 
 function endGame(win){
