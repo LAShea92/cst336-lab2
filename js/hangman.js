@@ -85,7 +85,7 @@ function updateMan(){
 }
 
 function showHint(){
-    $("#hint").append("<span class='hint'>Hint: " + selectedHint + "</span>");
+    $("#hint").append("<div class='hint'>Hint: " + selectedHint + "</div>");
     updateMan();
 }
 
