@@ -82,6 +82,11 @@ function updateMan(){
     console.log(remainingGuesses);
 }
 
+function showHint(){
+    $("#word").append("<br />");
+    $("#hint").append("<span class='hint'>Hint: " + selectedHint + "</span>");
+}
+
 function endGame(win){
     $("#letters").hide();
   
