@@ -20,11 +20,7 @@
             <div id="word"></div>
             <div id ="hint"><button class ="hintBtn btn-success">Show Hint</button></div>
             <div id="letters"></div>
-          
-            <div id="man">
-                <img src="img/stick_0.png" id="hangImg">
-            </div>
-          
+            
             <div id="won">
                 <h2>You won!</h2>
                 <button class="replayBtn btn btn-success">Play Again</button>
@@ -32,6 +28,10 @@
             <div id="lost">
                 <h2>You lost!</h2>
                 <button class="replayBtn btn btn-warning">Play Again</button>
+            </div>  
+          
+            <div id="man">
+                <img src="img/stick_0.png" id="hangImg">
             </div>
         </div>
       
