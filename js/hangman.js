@@ -65,6 +65,10 @@ $(".replayBtn").on("click", function(){
     location.reload();
 });
 
+$(".hintBtn").on("click", function(){
+    showHint();
+});
+
 $(".letter").click(function(){
     checkLetter($(this).attr("id"));
     disableButton($(this));
