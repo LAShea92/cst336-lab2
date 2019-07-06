@@ -16,6 +16,7 @@ function startGame(){
     pickWord();
     initBoard();
     updateBoard();
+    createLetters();
 }
 
 function initBoard(){
