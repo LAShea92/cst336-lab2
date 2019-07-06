@@ -84,11 +84,14 @@ function updateMan(){
 }
 
 function showHint(){
-    $("#word").append("<br />");
     $("#hint").append("<span class='hint'>Hint: " + selectedHint + "</span>");
     updateMan();
-    disableButton();
 }
+
+$(".hint").click(function(){
+    showHint();
+    disableButton($(this));
+})
 
 function endGame(win){
     $("#letters").hide();
