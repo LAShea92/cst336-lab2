@@ -18,7 +18,10 @@
                 <h4>Javascript Edition</h4>
             </header>
             <div id="word"></div>
-            <div id="letters"></div>
+            <div id="letters">
+                <input type="text" id="letterBox">
+                <button id="letterBtn">Submit</button>
+            </div>
           
             <div id="man">
                 <img src="img/stick_0.png" id="hangImg">
