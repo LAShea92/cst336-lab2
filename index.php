@@ -20,7 +20,6 @@
             <div id="word"></div>
             <div id="letters">
                 <input type="text" id="letterBox">
-                <button id="letterBtn">Submit</button>
             </div>
           
             <div id="man">
