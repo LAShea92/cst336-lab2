@@ -64,6 +64,7 @@ $(".replayBtn").on("click", function(){
 
 $(".hintBtn").on("click", function(){
     showHint();
+    disableButton($(this));
 });
 
 $(".letter").click(function(){
@@ -87,11 +88,6 @@ function showHint(){
     $("#hint").append("<span class='hint'>Hint: " + selectedHint + "</span>");
     updateMan();
 }
-
-$(".hint").click(function(){
-    showHint();
-    disableButton($(this));
-})
 
 function endGame(win){
     $("#letters").hide();
