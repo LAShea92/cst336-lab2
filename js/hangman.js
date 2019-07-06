@@ -61,10 +61,6 @@ $("letterBtn").click(function(){
     console.log("You pressed the button and it had the value: " + boxVal);
 })
 
-$(".letter").click(function(){
-    checkLetter($(this).attr("id"));
-});
-
 $(".replayBtn").on("click", function(){
     location.reload();
 });
