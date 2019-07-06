@@ -38,9 +38,6 @@ function updateBoard(){
     for(var i = 0; i < board.length; i++){
         $("#word").append(board[i] + " ");
     }
-  
-    $("#word").append("<br />");
-    $("#word").append("<span class='hint'>Hint: " + selectedHint + "</span>");
 }
 
 function updateWord(positions, letter){
@@ -89,6 +86,8 @@ function updateMan(){
 function showHint(){
     $("#word").append("<br />");
     $("#hint").append("<span class='hint'>Hint: " + selectedHint + "</span>");
+    updateMan();
+    disableButton()
 }
 
 function endGame(win){
