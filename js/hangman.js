@@ -83,6 +83,7 @@ function createLetters() {
 function updateMan(){
     remainingGuesses -= 1;
     $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
+    console.log(remainingGuesses);
 }
 
 function endGame(win){
@@ -100,7 +101,6 @@ function checkLetter(letter){
     var positions = new Array();
   
     for(var i = 0; i < selectedWord.length; i++){
-        console.log(selectedWord)
         if(letter == selectedWord[i]){
             positions.push(i);
         }
