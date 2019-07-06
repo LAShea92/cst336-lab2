@@ -72,7 +72,7 @@ $(".letter").click(function(){
 
 function createLetters() {
     for (var letter of alphabet){
-        $("#letters").append("<button class='letter' id='" + letter + "'>" + letter + "</button>");
+        $("#letters").append("<button class='btn btn-success letter' id='" + letter + "'>" + letter + "</button>");
     }
 }
 
