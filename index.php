@@ -10,17 +10,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script language="javascript">
-            var selectedWord = "";
-            var selectedHint = "";
-            var board = [];
-            var remainingGuesses = 6;
-            var words = ["snake", "monkey", "beetle"];
-          
-            console.log(words[0]);
-          
-            var randomInt = Math.floor(Math.random() * words.length);
-            selectedWord = words[randomInt]
+      
         </script>
     </head>
     <body>
@@ -36,5 +26,7 @@
                 <img src="img/stick_0.png" id="hangImg">
             </div>
         </div>
+      
+        <script src="js/hangman.js"></script>
     </body>
 </html>
