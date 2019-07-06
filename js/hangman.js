@@ -40,7 +40,7 @@ function updateBoard(){
     }
   
     $("#word").append("<br />");
-    $("#word").append("<span class='hint'>Hint: "> + selectedHint + "</span>");
+    $("#word").append("<span class='hint'>Hint: " + selectedHint + "</span>");
 }
 
 function updateWord(positions, letter){
