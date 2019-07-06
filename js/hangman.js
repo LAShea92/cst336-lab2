@@ -27,7 +27,7 @@ function initBoard(){
 
 function pickWord(){
     var randomInt = Math.floor(Math.random() * words.length);
-    selectedWord = words[randomInt];
+    selectedWord = words[randomInt].toUpperCase();
 }
 
 function updateBoard(){
@@ -41,8 +41,30 @@ $("letterBtn").click(function(){
     console.log("You pressed the button and it had the value: " + boxVal);
 })
 
+$(".letter").click(function(){
+    checkLetter($(this).attr("id"));
+});
+
 function createLetters() {
     for (var letter of alphabet){
         $("#letters").append("<button class='letter' id='" + letter + "'>" + letter + "</button>");
+    }
+}
+
+function checkLetter(letter){
+    var positions = new Array();
+  
+    for(var i = 0; i < selectedWord.length; i++){
+        console.log(selectedWord)
+        if(letter == selectedWord[i]){
+            positions.push(i);
+        }
+    }
+  
+    if(positions.length > 0){
+        updateWord(positions, letter);
+    }
+    else{
+        remainingGuesses -= 1;
     }
 }
