@@ -20,7 +20,9 @@
             <div id="word"></div>
             <div id="letters"></div>
           
-            <div id="man"></div>
+            <div id="man">
+                <img src="img/stick_0.png" id="hangImg">
+            </div>
           
             <div id="won">
                 <h2>You won!</h2>
