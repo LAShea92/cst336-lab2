@@ -65,7 +65,7 @@ function createLetters() {
 }
 
 function updateMan(){
-    $("hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
+    $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
 }
 
 function endGame(win){
